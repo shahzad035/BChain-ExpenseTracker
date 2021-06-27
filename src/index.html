@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Expense-Tracker</title>
+
+    <!-- Bootstrap -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+	 <link rel="stylesheet" href="css/style.css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+  	<div style="padding-left:30%; padding-right:30%;">
+      <div class="row">
+        <div class="panel panel-default panel-pet">
+          <div class="panel-heading">
+            <h2>Expense Tracker</h2>
+          </div>
+          <div class="panel-body">
+            <div style="text-align:center;">
+			<img alt="140x140" data-src="holder.js/140x140" class="img-rounded img-center" style="width: 24%;" src="images/expt.jpeg" data-holder-rendered="true">
+            </div>
+			<br/>
+            <div style="text-align:center;">
+			<h4>Your Balance</h4>
+			<h1 id="balance">$0.00</h1>
+			</div>
+			<div class="inc-exp-container">
+			<div>
+			  <h4>Income</h4>
+			  <p id="income" class="money plus">+$0.00</p>
+			</div>
+			<div>
+			  <h4>Expense</h4>
+			  <p id="expense" class="money minus">-$0.00</p>
+			</div>
+		  </div>
+			 <h3>History</h3>
+      <ul id="list" class="list">
+        <!-- <li class="minus">
+          Cash <span>-$400</span>
+        </li>
+        <li class="plus">
+          Payment <span>$400</span>
+        </li> -->
+      </ul>
+	    <h5>Add Transaction</h5>
+      <form id="form" onsubmit="addTransaction(); return false;">
+        <div class="form-control">
+          <!-- <label for="text">Text</label> -->
+          <!-- <input type="text" id="text" placeholder="Enter text..." /> -->
+		 <select id="ddlTransactions" class="input-lg">
+		  <option value="0" selected="selected">Select Transaction</option>
+		  <option value="1">Income / Salary</option>
+		  <option value="2">House Rent (Expense)</option>
+		  <option value="3">Utility Bills (Expense)</option>
+      <option value="4">Grocery (Expense)</option>
+      <option value="5">Others... (Expense)</option>
+		</select>
+        </div>
+        <div class="form-control">
+		<h5>Amount</h5>
+          <input type="number" id="txtAmount" placeholder="Enter amount..." />
+        </div>
+        <button class="btn" type="submit">Add Transaction</button>
+      </form>
+      </div>
+        </div>
+      </div>
+    </div>
+ </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
